@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>gallery</title>
 
 	<style type="text/css">
 		*{
@@ -37,12 +37,16 @@
 		.photo .side{
 			position: absolute;
 			top: 0;
-			right: 0；
+			right: 0;
 			width: 100%;
 			height: 100%;
+			padding: 20px;
+			box-sizing: border-box;
 			background-color: #eee;
 		}
-		.photo .side-front{}
+		.photo .side-front{
+			display: none;
+		}
 		.photo .side-front .image{
 			width: 100%;
 			height: 250px;
@@ -56,17 +60,30 @@
 		.photo .side-front .caption{
 			text-align: center;
 		}
+		.photo .side-back .desc{
+			color: #666;
+			font-size: 14px;
+			line-height: 1.5em;
+		}
+
+		/*当前选中的海报样式*/
+		.photo_center{
+			left: 50%;
+			top: 50%;
+			margin: -160px 0 0 -130px;
+			z-index: 999;
+		}
 	</style>
 </head>
 <body onselectstart="return false;">
 	<div class="wrap">
-		<div class="photo">
+		<div class="photo photo_center">
 			<div class="side side-front">
 				<div class="image"><img src="5.jpg" alt="西昌邛海"></div>
 				<div class="caption">西昌邛海</div>
 			</div>
 			<div class="side side-back">
-				<p>描述信息</p>
+				<p class="desc">描述信息</p>
 			</div>
 		</div>
 	</div>
