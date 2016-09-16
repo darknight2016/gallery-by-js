@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>gallery</title>
+	
+	<!-- 样式文件 -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body onselectstart="return false;">
 	<div class="wrap" id="wrap">
@@ -11,7 +14,7 @@
 			<!-- 负责旋转 -->
 			<div class="photo-wrap">
 				<div class="side side-front">
-					<div class="image"><img src="photos/{{img}}"></div>
+					<div class="image"><img src="img/{{img}}"></div>
 					<div class="caption">{{caption}}</div>
 				</div>
 				<div class="side side-back">
@@ -20,4 +23,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- 图片对象引入 -->
+	<script type="text/javascript" src="js/Data.js"></script>
+	<!-- main.js 引入 -->
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
