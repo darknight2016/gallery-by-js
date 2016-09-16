@@ -78,3 +78,86 @@ body{
 
 
 /*选中海报样式*/
+.photo_center{
+	margin: -160px 0 0 -130px;
+	z-index: 999;
+}
+.photo-wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+
+/*选中海报前后样式*/
+.photo-wrap .side-front{
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+.photo-wrap .side-back{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.photo-wrap .side{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/*图片状态控制*/
+.photo_front .photo-wrap{
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+.photo_back .photo-wrap{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/*导航*/
+@font-face {
+	font-family: "iconfont";
+	src: url('font/iconfont.eot?t=1473837144'); /* IE9*/
+	src: url('font/iconfont.eot?t=1473837144#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('font/iconfont.woff?t=1473837144') format('woff'), /* chrome, firefox */
+	url('font/iconfont.ttf?t=1473837144') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('font/iconfont.svg?t=1473837144#iconfont') format('svg'); /* iOS 4.1- */
+}
+.nav{
+	position: absolute;
+	top: 80%;
+	width: 100%;
+	
+	text-align: center;
+	z-index: 999;
+	margin-bottom: 40px;
+	margin-left: auto;
+
+	/*background: red;*/
+}
+.heart-1:before{
+	font-family: "iconfont";
+	font-size: 20px;
+	/*content: "\e60e";*/
+}
+.heart-2:before{
+	font-family: "iconfont";
+	font-size: 20px;
+	color: red;
+	/*content: "\e60f";*/
+	content: attr(data-icon);
+}
+.nav span{
+	font-family: 'iconfont';
+}
